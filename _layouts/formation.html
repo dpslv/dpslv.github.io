@@ -1,0 +1,22 @@
+---
+layout: default
+---
+<article class="formation">
+  <header class="post-header">
+    <h1>
+      {{ page.titre }}
+      <a class="typeform-share btn btn-primary " href="{{page.typeform}}" data-mode="1" target="_blank">S'inscrire</a>
+    </h1>
+    Objectif
+    <div class="progress">
+      {% assign percent = (page.participants | times:100 | divided_by:page.objectif) %}
+      <div class="progress-bar" role="progressbar" aria-valuenow="{{ page.participants}}" aria-valuemin="0" aria-valuemax="{{ page.objectif}}" style="width: {{ percent }}%;">
+        <span>{{ page.participants }} / {{page.objectif}} </span>
+      </div>
+     </div>
+  </header>
+  <div >
+    {{ content }}
+  </div>
+</article>
+<script>(function(){var qs,js,q,s,d=document,gi=d.getElementById,ce=d.createElement,gt=d.getElementsByTagName,id='typef_orm',b='https://s3-eu-west-1.amazonaws.com/share.typeform.com/';if(!gi.call(d,id)){js=ce.call(d,'script');js.id=id;js.src=b+'share.js';q=gt.call(d,'script')[0];q.parentNode.insertBefore(js,q)}id=id+'_';if(!gi.call(d,id)){qs=ce.call(d,'link');qs.rel='stylesheet';qs.id=id;qs.href=b+'share-button.css';s=gt.call(d,'head')[0];s.appendChild(qs,s)}})()</script>

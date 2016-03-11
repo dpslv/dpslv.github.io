@@ -12,9 +12,13 @@ description: >
   Des formations par des développeurs pour des développeurs, certifiées
   100 % sans slide et sur mesure
 baseurl: "" # the subpath of your site, e.g. /blog
-url: "http://dpslv.fr" # the base hostname & protocol for your site
+url: "http://dpslv.github.io" # the base hostname & protocol for your site
 twitter_username: dpslv
 github_username:  dpslv
+collections:
+  formations:
+    output: true
+    permalink: /formation/:path/
 
 # Build settings
 markdown: kramdown
